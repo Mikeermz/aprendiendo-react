@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Button from '../Button';
 
-class Counter extends React.Component {
+class Counter extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -11,7 +11,6 @@ class Counter extends React.Component {
 	}
 
 	setMyState = (myState, number) => {
-		console.log(number)
 		this.setState({
 			[myState]: number,
 		})
@@ -46,8 +45,7 @@ class Counter extends React.Component {
 							myState="count"
 						/>
 				</>
-				<> {/* Esto es un Fragment */}
-					{/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
+				<> 
 					<h1>{title} numero 2</h1>
 						<Button 
 							title="Sumar" 
